@@ -40,3 +40,4 @@ yarn-error.log*
 .parcel-cache/
 tmp/
 temp/
+node_modules/*
