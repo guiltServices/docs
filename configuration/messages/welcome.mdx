@@ -1,0 +1,77 @@
+---
+title: "Welcome Message"
+description: "Automatically send a message when someone joins your server."
+icon: hand-wave
+---
+
+<Info>
+You can have up to **5** welcome messages per guild.
+</Info>
+
+# Adding a welcome message
+
+<img
+  style={{ borderRadius: '0.5rem' }}
+  src="https://m.e-girls.host/uqnt.png"
+/>
+
+<Info>
+  The following examples give an insite on how to use a plain text message, and an embed message.
+</Info>
+
+<Tip>
+The `message` parameter can be plain text, or an [embed](https://guilt.bot/embed) using [variables](/configuration/variables)
+</Tip>
+
+<CodeGroup>
+
+```javascript Syntax
+,welcome add <channel> <message>
+```
+
+```javascript Example
+,welcome add #chat welcome to {guild} {user.mention}
+,welcome add #chat {embed}$v{content: {user.mention}}$v{description: {guild.name}}$v{title: {guild.name}}
+```
+
+</CodeGroup>
+
+# Viewing a welcome message 
+You are able to test the welcome message to make sure it looks right for your needs, by using the `,welcome view` command.
+
+<CodeGroup>
+
+```javascript Syntax 
+,welcome view <channel>
+```
+
+```javascript Example
+,welcome view #docs
+```
+
+</CodeGroup>
+
+<img 
+  style={{ borderRadius: '0.5rem' }}
+  src="https://m.e-girls.host/GX4s.png"
+/>
+
+# Removing a welcome message
+You can remove a welcome message with the `,welcome remove` command.
+
+<CodeGroup>
+
+```javascript Syntax
+,welcome remove <channel>
+```
+
+```javascript Example
+,welcome remove #chat
+```
+
+</CodeGroup>
+
+<img
+  style={{ borderRadius: '0.5rem' }}
+  src="https://m.e-girls.host/YFud.png"
+/>
