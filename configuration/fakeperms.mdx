@@ -1,0 +1,56 @@
+---
+title: "Fake Permissions"
+description: "Restrict moderators to only use guilt for moderation."
+icon: shield-check
+---
+
+# Why use fake permissions?
+> Using fake permissions reduce the chance of a possible corrupt moderator using scripts they found online, which floods **Discord's API** and bans all the members in your guild, or any other harmful action. Fake permissions is a security measure, which ensures that your server's moderators can only ban / kick, ect using the bot.
+
+# How do they work?
+> When a role is given fake permissions, such as the `ban members` permission. they will be able to use the `ban` command in guilt, but will **not** be able to use the built-in Discord ban feature.
+
+<Warning>
+The following commands can only be used by the **server owner**.
+</Warning>
+
+<CodeGroup>
+
+```javascript Syntax
+,fakeperms add @role permission
+```
+
+```javascript Example
+,fakeperms add @manager ban_members
+```
+
+</CodeGroup>
+
+<Info>
+A role can have more than one fake permission setup; just run the same command with a **different** permission you want to add.
+</Info>
+
+<img
+  style={{ borderRadius: '0.5rem' }}
+  src="https://m.e-girls.host/Vdwx.png"
+/>
+
+# Removing a fake permission
+You can remove a fake permission with the `,fakeperms remove` command.
+
+<CodeGroup>
+
+```javascript Syntax
+,fakeperms remove <role> <permission
+```
+
+```javascript Example
+,fakeperms remove @manager ban_members
+```
+
+</CodeGroup>
+
+<img
+  style={{ borderRadius: '0.5rem' }}
+  src="https://m.e-girls.host/yKE1.png"
+/>
