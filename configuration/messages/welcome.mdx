@@ -20,7 +20,7 @@ You can have up to **5** welcome messages per guild.
 </Info>
 
 <Tip>
-The `message` parameter can be plain text, or an [embed](https://guilt.bot/embed) using [variables](/configuration/variables)
+The `message` parameter can be plain text, or an [embed](https://guilt.bot/embeds) using [variables](/configuration/variables)
 </Tip>
 
 <CodeGroup>
@@ -31,7 +31,7 @@ The `message` parameter can be plain text, or an [embed](https://guilt.bot/embed
 
 ```javascript Example
 ,welcome add #chat welcome to {guild} {user.mention}
-,welcome add #chat {embed}$v{content: {user.mention}}$v{description: {guild.name}}$v{title: {guild.name}}
+,welcome add #chat {content: {user.mention}}{description: {guild.name}}{title: {guild.name}}
 ```
 
 </CodeGroup>

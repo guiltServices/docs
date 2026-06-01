@@ -1,0 +1,70 @@
+---
+title: "Goodbye Message"
+description: "Automatically send a message when someone leaves your server."
+icon: door-open
+---
+
+# Adding a goodbye message
+
+<img
+  style={{ borderRadius: '0.5rem' }}
+  src="https://m.e-girls.host/UBwb.png"
+/>
+
+
+<Tip>
+The `message` parameter can be plain text, or an [embed](https://guilt.bot/embeds) using [variables](/configuration/variables)
+</Tip>
+
+<CodeGroup>
+
+```javascript Syntax
+,goodbye add <channel> <message>
+```
+
+```javascript Example
+,goodbye add #chat bye {user.mention}
+,goodbye add #chat {description: {user.name} just left... how lame.}{footer: sighs.}
+```
+
+</CodeGroup>
+
+# Viewing a goodbye message 
+You are able to test the goodbye message to make sure it looks right for your needs, by using the `,goodbye view` command.
+
+<CodeGroup>
+
+```javascript Syntax 
+,goodbye view <channel>
+```
+
+```javascript Example
+,welcome goodbye #docs
+```
+
+</CodeGroup>
+
+<img 
+  style={{ borderRadius: '0.5rem' }}
+  src="https://m.e-girls.host/HxAp.png"
+/>
+
+# Removing a goodbye message
+You can remove a goodbye message with the `,goodbye remove` command.
+
+<CodeGroup>
+
+```javascript Syntax
+,goodbye remove <channel>
+```
+
+```javascript Example
+,goodbye remove #chat
+```
+
+</CodeGroup>
+
+<img
+  style={{ borderRadius: '0.5rem' }}
+  src="https://m.e-girls.host/v9fe.png"
+/>
